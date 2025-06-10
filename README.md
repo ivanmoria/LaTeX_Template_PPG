@@ -31,7 +31,7 @@ Este repositório contém um template LaTeX desenvolvido para facilitar a elabor
 
 ## Exemplo de Sumário
 
-Abaixo está um exemplo visual do sumário gerado automaticamente pelo template, com base na estrutura dos arquivos `.tex` incluídos:
+Abaixo está um exemplo visual do sumário gerado automaticamente pelo template em PDF, com base na estrutura dos arquivos `.tex` incluídos:
 
 ![Print do sumário](arquivos/sumario.png)
 
