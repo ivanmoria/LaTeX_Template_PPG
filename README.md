@@ -34,12 +34,14 @@ Este repositório contém um template LaTeX desenvolvido para facilitar a elabor
 ### Opção 1: Clonar o repositório
 
 1. Clone este repositório:
-   ```bash
+
+```bash
    git clone https://github.com/ivanmoria/LaTeX_Template_PPG_Musica_UFMG.git
 ```
 2. Acesse a pasta clonada:
+
 ```bash
-cd LaTeX_Template_PPG_Musica_UFMG
+  cd LaTeX_Template_PPG_Musica_UFMG
 ```
 3. Abra o arquivo main.tex no seu editor LaTeX preferido (ex: TeXstudio, VSCode com extensão LaTeX Workshop, Overleaf Desktop).
 
