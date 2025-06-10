@@ -1,0 +1,169 @@
+\setlength{\parskip}{1.5pt}
+
+\chapter[Introdução]{Introdução}
+
+\section{Introdução \LaTeX}
+Você pode querer ter um glossário. Para isso, existe o glossario.tex, um arquivo que você lista todos os que você adicionar. No final do texto eles aparecerão automaticamente. Crie seu glossário e sempre os referencie assim: "Este trabalho aborda a \gls{termo1} e o uso do protocolo \gls{midi}".
+
+
+Organize seu arquivo \texttt{bib.bib}\footnote{Arquivo BibTeX, deve ser criada uma referência individual e preenchidos os campos. Identifique o tipo entre \texttt{@article}, \texttt{@book}, \texttt{@inproceedings}, etc. Você cria um nome dentro das chaves, por exemplo \texttt{@article\{referencia\}}, e no texto, cita essa referência com \cite{referencia}}. \\ 
+Texto com citações: o autor e ano completos entre parênteses cita-se com \cite{article}, somente o ano da referência entre parênteses cita-se com \citeyear{capitulo}. Para citar vários, utilize \parencite{book, congresso, tese, site, manual, relatoriotecnico, naopublicado}.
+
+
+\vspace{1.5em} %espaço forçado
+
+
+\begin{quote}
+    Citação identada em 5cm. Você pode mudar dentro do arquivo con.tex. Todas as modificações estruturais do arquivo são modificadas separadamente dentro desta configuração. Esse layout define todas os capítulos em diferentes arquivos, separando em blocos e facilitando a edição de forma modular. \cite[p. 00-00]{capitulo}.
+\end{quote}
+
+Aqui está uma frase com uma nota de rodapé.\footnote{Este é o texto da nota de rodapé.}
+
+
+
+\subsection{Listas}
+Enumere listas assim:
+\begin{enumerate}
+    \item Item 1
+    \item Item 2
+\end{enumerate}
+
+
+\subsection{Tabelas}
+Crie tabelas desta maneira:
+
+
+\begin{table}[h!]
+    \centering
+  
+    \label{tab:nometabela}
+    \begin{tabular}{|l|p{10cm}|}
+    \hline
+    \textbf{Parâmetro} & \textbf{Definição} \\ \hline
+    \textbf{Título 1}     & Conteúdo \\ \hline
+  
+    \textbf{Título 2}     & Conteúdo \\ \hline
+
+    \end{tabular}
+    \caption{Legenda da tabela 1.}
+    \end{table}
+
+Adicione mais linhas ou colunas copiando o conteúdo e adicionando \textbf{\&} para cada nova coluna, desta maneira: 
+
+\begin{table}[h!]
+    \centering
+   
+    \label{tab:nometabela2}
+  \begin{tabular}{|l|p{3cm}|p{3cm}|p{3cm}|}
+
+    \hline
+    \textbf{Parâmetro} & \textbf{Definição 1} & \textbf{Definição 2} & \textbf{Definição 3} \\ \hline
+    \textbf{Título 1}  & Conteúdo            & Conteúdo            & Conteúdo            \\ \hline
+    \textbf{Título 2}  & Conteúdo            & Conteúdo            & Conteúdo            \\ \hline
+
+    \textbf{Título 3}  & Conteúdo            & Conteúdo            & Conteúdo            \\ \hline
+
+    
+    \end{tabular}
+     \caption{Legenda da tabela 2.}
+\end{table}
+
+\newpage
+%preciso colocar isso para nao quebrar a pagina
+
+\subsection{Imagens}
+Para incluir imagens, salve dentro da pasta e mude a referência. No item label, você pode referenciar sua figura com \ref{fig1}. Também pode modificar seu tamanho com width:
+
+
+\begin{figure}[h]
+    \centering
+\includegraphics[width=0.2\textwidth]{arquivos/pre-texto/Logo_UFMG.png}
+    \caption{Legenda da Imagem 1}
+    \label{fig1}
+\end{figure}
+
+
+
+\subsection{Equações}
+Incluindo equações, podendo referenciar como Equação  \ref{ioi_eq1}:
+
+\begin{equation}\label{ioi_eq1}
+    IoI_i = t_{i+1} - t_i
+\end{equation}
+
+Ou direto no texto, desta maneira:
+
+
+\[
+\text{densidade} = \frac{\text{duração}[1:]}{t_{\text{diff}}}
+\]
+
+\vspace{1.5em}
+
+
+\subsection{Códigos}
+Você pode citar o código \ref{lst:codigo-python} desta maneira:
+
+
+\begin{listing}[h!]
+    \centering
+    \begin{minted}[frame=lines, style=friendly, linenos=true]{python}
+    import numpy as np 
+    import pandas as pd  
+    \end{minted}
+    \caption{Exemplo Python 1}
+    \label{lst:codigo-python}
+    \end{listing}
+    
+
+\newpage
+
+\section{Considerações Finais}
+
+Utilize o comando \texttt{\textbackslash newpage} sempre que necessário para controlar a quebra de página.  
+Os demais capítulos estão organizados na pasta \texttt{capitulos}, devendo ser editados separadamente.  
+O arquivo principal, \texttt{main.tex}, é responsável por compilar todos os componentes e fazer o \LaTeX\ funcionar corretamente.
+
+\noindent O próximo capítulo é Metodologia, localizado no arquivo \texttt{arquivos/metodologia.tex}.
+
+
+\subsection{Mais exemplos} 
+
+Imagem:
+\begin{figure}[h]
+    \centering
+\includegraphics[width=0.2\textwidth]{arquivos/pre-texto/Logo_UFMG.png}
+    \caption{Legenda da Imagem 2}
+    \label{fig2}
+\end{figure}
+
+Código Python:
+\begin{listing}[h!]
+    \centering
+    \begin{minted}[frame=lines, style=friendly, linenos=true]{python}
+    import numpy as np 
+    import pandas as pd  
+    \end{minted}
+    \caption{Exemplo Python 2 }
+    \label{lst:codigo-python2}
+    \end{listing}
+
+Tabela mais larga:
+\begin{table}[h!]
+    \centering
+    \begin{tabularx}{\textwidth}{|l|X|X|X|}
+        \hline
+        \textbf{Parâmetro} & \textbf{Definição 1} & \textbf{Definição 2} & \textbf{Definição 3} \\ \hline
+        \textbf{Título 1}  & Conteúdo & Conteúdo & Conteúdo \\ \hline
+  
+    \end{tabularx}
+    \caption{Legenda da tabela 3.}
+    \label{tab:nometabela3}
+\end{table}
+
+
+
+
+A seguir, Metodologia.
+
+\newpage

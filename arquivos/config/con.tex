@@ -1,0 +1,136 @@
+% Codificação, fonte e idioma
+\usepackage[utf8]{inputenc}      % Codificação UTF-8
+\usepackage[T1]{fontenc}         % Fonte com suporte a acentuação
+\usepackage[portuguese]{babel}   % Hifenização e termos em português
+
+% Fonte (Times New Roman equivalente para pdfLaTeX)
+\usepackage{newtxtext}           % Fonte parecida com Times New Roman
+
+% Tipografia
+\usepackage{microtype}           % Melhora a justificação
+\usepackage{setspace}            % Controle de espaçamento entre linhas
+\usepackage{ragged2e}            % Comando \justifying
+\onehalfspacing                  % Espaçamento 1,5 entre linhas
+
+% Layout e margens
+\usepackage{geometry}
+\geometry{
+  top=3cm,
+  bottom=2cm,
+  left=3cm,
+  right=2cm
+}
+
+% Títulos e espaçamento de capítulos
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\normalfont\Huge\bfseries}{\thechapter}{2em}{}
+\titlespacing*{\chapter}{0pt}{0pt}{1.5em}
+
+% Controle de parágrafos
+\setlength{\parindent}{1.5cm} % Recuo de parágrafo
+\setlength{\parskip}{0pt}     % Sem espaço extra entre parágrafos
+
+% Figuras, tabelas e gráficos
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage[font=small]{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\DeclareGraphicsExtensions{.png,.jpg,.pdf}
+
+% Tabelas coloridas
+\usepackage[table]{xcolor}
+
+% Cores personalizadas
+\definecolor{color_200_200_200}{RGB}{200,200,200}
+\definecolor{pastelBlue}{RGB}{135, 206, 250}
+\definecolor{pastelOrange}{RGB}{255, 178, 102}
+\definecolor{pastelRed}{RGB}{240, 128, 128}
+\definecolor{pastelGreen}{RGB}{144, 238, 144}
+\definecolor{blue}{RGB}{41,5,195}
+\definecolor{blue2}{RGB}{41,5,155}
+\usepackage{pdfpages}
+
+% Hiperlinks
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue2,
+    urlcolor=blue,
+    filecolor=magenta,
+    breaklinks=true
+}
+\Urlmuskip=0mu plus 1mu % Melhor quebra de links longos
+
+\usepackage[backend=biber, style=abnt]{biblatex} % Estilo ABNT
+\renewcommand*{\mkbibnamefamily}[1]{#1} % Remove caixa alta dos sobrenomes nas citações
+
+\addbibresource{bib.bib} % seu arquivo bib
+
+
+
+
+
+
+\usepackage{csquotes}
+
+
+
+% Estilo da bibliografia
+\renewcommand*{\bibfont}{\small\justifying\singlespacing}
+
+% Código fonte
+\usepackage{minted} % Lembrar de compilar com --shell-escape
+
+% Outros utilitários
+\usepackage{lastpage}
+\usepackage{indentfirst}
+\usepackage{pifont}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,amsthm}
+\usepackage{etoolbox}
+\usepackage{xstring}
+\usepackage{hyphenat}
+\usepackage{changepage}  % Para recuos
+\usepackage{chngcntr}    % Para controlar contadores
+
+% Ajuste na numeração das figuras
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{equation}{chapter} 
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{secnumdepth}{2}
+\usepackage{tabularx}
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+
+
+\usepackage[acronym,toc,nonumberlist]{glossaries}
+\makeglossaries
+
+\input{arquivos/glossario} % aqui só definindo os termos do glossário
+
+\usepackage{hyperref}
+\usepackage{glossaries}
+
+
+% Códigos
+\renewcommand{\listingscaption}{Código}
+\renewcommand{\listoflistingscaption}{Lista de Códigos}
+
+\usepackage{changepage} % para o adjustwidth
+
+\renewenvironment{quote}
+  {\begin{adjustwidth}{5cm}{0cm}\fontsize{10}{12}\selectfont}
+  {\end{adjustwidth}}
+
+% Seções centralizadas personalizadas (se necessário)
+\newcommand{\centersection}[1]{
+    \begin{center}
+        \textbf{\large #1}
+    \end{center}
+}

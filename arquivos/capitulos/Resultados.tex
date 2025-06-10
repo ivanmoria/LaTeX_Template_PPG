@@ -1,0 +1,53 @@
+\setlength{\parskip}{1.5pt}
+\chapter[Resultados]{Resultados}
+
+
+Apresente aqui os seus resultados. Inclua imagens, tabelas, glossário como \gls{midi}, referências \cite{article}.
+
+
+
+Exemplo de imagem: 
+\begin{figure}[h]
+    \centering
+\includegraphics[width=0.2\textwidth]{arquivos/pre-texto/Logo_UFMG.png}
+    \caption{Legenda da Imagem 3}
+    \label{fig3}
+\end{figure}
+
+Enumere listas assim:
+\begin{enumerate}
+    \item Item 1
+    \item Item 2
+\end{enumerate}
+
+Tabela mais larga:
+\begin{table}[h!]
+    \centering
+    \begin{tabularx}{\textwidth}{|l|X|X|X|}
+        \hline
+        \textbf{Parâmetro} & \textbf{Definição 1} & \textbf{Definição 2} & \textbf{Definição 3} \\ \hline
+        \textbf{Título 1}  & Conteúdo & Conteúdo & Conteúdo \\ \hline
+        \textbf{Título 2}  & Conteúdo & Conteúdo & Conteúdo \\ \hline
+        \textbf{Título 3}  & Conteúdo & Conteúdo & Conteúdo \\ \hline
+        
+    \end{tabularx}
+    \caption{Legenda da tabela 3.}
+    \label{tab:nometabela3}
+\end{table}
+
+
+\section{Adicionando pdf}
+Talvez você possa incluir um PDF de algum artigo que foi resultado da pesquisa. Para isso, utilize essa lógica neste ponto do documento\footnote{Adicione o seu pdf e mude a localização do arquivo.}:
+
+\begin{listing}[h!]
+    \centering
+    \begin{minted}[frame=lines, style=friendly, linenos=true]{latex}
+\includepdf[pages=-]{arquivos/artigo.pdf}
+    \end{minted}
+    \caption{Exemplo \LaTeX}
+    \label{lst:codigo-latex}
+\end{listing}
+
+
+Finalizando este arquivo, o próximo é Discussão.tex.
+

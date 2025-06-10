@@ -1,0 +1,106 @@
+\documentclass[12pt,oneside,a4paper]{report}
+\input{arquivos/config/con} % arquivo com configurações e imports.
+\graphicspath{{arquivos/figuras/}}
+
+% Incluir capa com metadados contidos em "dados.tex"
+\input{dados}
+
+\begin{document}
+
+%Incluir capa
+\include{arquivos/pre-texto/capa}
+
+% Ficha Catalográfica - TROQUE PELA SUA
+\includepdf{arquivos/pre-texto/Ficha_Catalografica.pdf}
+
+% -------------------------------------------------
+% ELEMENTOS PRÉ-Textuais
+% -------------------------------------------------
+
+% Folha de aprovação (comente a linha que nao vai utilizar com %)
+%Pode fazer manual utilizando o aprovacao.tex
+\include{arquivos/pre-texto/aprovacao}
+%pode adicionar um pdf caso necessário
+\includepdf{arquivos/pre-texto/aprovacao.pdf}
+
+
+% Dedicatória
+\include{arquivos/pre-texto/dedicatoria}
+
+% Agradecimentos
+\include{arquivos/pre-texto/agradecimentos}
+
+% Epígrafe
+\include{arquivos/pre-texto/epigrafe}
+
+% Resumo
+\include{arquivos/pre-texto/resumo}
+
+% Abstract
+\include{arquivos/pre-texto/abstract}
+
+%Adicione comentario caso necessario para remover Lista de Figuras e Tabela etc do Sumário
+
+% Lista de Figuras e Tabelas
+\addcontentsline{toc}{section}{Lista de Figuras} 
+\listoffigures % Gera a lista de figuras
+\newpage % Nova página para separar o conteúdo
+
+\addcontentsline{toc}{section}{Lista de Tabelas} 
+\listoftables % Gera a lista de tabelas
+\newpage % Nova página para separar o conteúdo
+
+% Lista de Siglas
+%Lista de Símbolos
+% Lista de códigos
+
+\addcontentsline{toc}{section}{Lista de Códigos} 
+\listoflistings\newpage
+
+% ------------------------------------
+% SUMÁRIO
+% ------------------------------------
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents % Isso lista o Conteúdo
+
+
+%------------------------------------------------
+% CAPÍTULOS
+%-------------------------------------------------
+\cleardoublepage
+\pagenumbering{arabic} % redefine o estilo de numeração (números arábicos)
+\setcounter{page}{1}   % reinicia contagem
+
+\include{arquivos/capitulos/Introducao}
+\include{arquivos/capitulos/Metodologia}
+\include{arquivos/capitulos/Resultados}
+\include{arquivos/capitulos/Discussao}
+\include{arquivos/capitulos/Conclusao}
+\chapter*{Referências}
+\addcontentsline{toc}{chapter}{Referências}
+\printbibliography[heading=none]
+
+
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Glossário}
+\printglossary[title=Glossário, style=altlist]
+
+
+
+%  ITENS PÓS-TEXTUAIS  %
+
+
+% Apêndices
+%\chapter*{Apêndices}
+
+
+\chapter*{Anexos}
+
+Os anexos poderão ser colocados aqui ou via pdf, que será incluído na próxima página. 
+
+\includepdf[pages=-]{arquivos/anexos/diretrizes_UFMG}
+
+
+\end{document}
