@@ -1,4 +1,4 @@
-# Template LaTeX para o Programa de Pós-Graduação em Música - UFMG
+# Template LaTeX para Dissertações e Teses do Programa de Pós-Graduação em Música - UFMG
 
 Este repositório contém um template LaTeX desenvolvido para facilitar a elaboração de documentos acadêmicos (dissertações, teses, relatórios) no âmbito do Programa de Pós-Graduação em Música da Universidade Federal de Minas Gerais (UFMG).
 
