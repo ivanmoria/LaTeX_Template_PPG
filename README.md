@@ -7,14 +7,16 @@ Este repositório contém um template LaTeX desenvolvido para facilitar a elabor
 ## Estrutura do Template
 
 - O arquivo principal é o `main.tex`, que carrega todos os demais arquivos do projeto.
-- A tese foi dividida em blocos, onde cada capítulo está em um arquivo `.tex` independente, por exemplo:
-  - `introducao.tex`
-  - `metodologia.tex`
-  - `discussao.tex`
+- A tese foi dividida em blocos, onde cada capítulo está em um arquivo `.tex` independente, localizado dentro da pasta `arquivos/`, por exemplo:
+  - `arquivos/introducao.tex`
+  - `arquivos/metodologia.tex`
+  - `arquivos/discussao.tex`
 - Há um arquivo chamado `dados.tex` onde você deve inserir suas informações pessoais e do trabalho, como:
   - Nome do autor
   - Título da tese
   - Nome do orientador
+- Você pode adicionar suas figuras dentro de pastas e importá-las de maneira organizada.
+- Você pode adicionar arquivos .pdf e importá-los dentro do main.tex.
 
 - Para as referências bibliográficas, utilize o arquivo `bib.bib`. Atualize-o com as referências do seu trabalho.
 - O glossário está separado em um arquivo chamado `glossario.tex`, que deve ser editado conforme necessário.
@@ -28,7 +30,6 @@ Este repositório contém um template LaTeX desenvolvido para facilitar a elabor
 ---
 
 ## Como usar
-
 
 ### Opção 1: Clonar o repositório
 
